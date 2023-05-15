@@ -1,0 +1,82 @@
+.historyOption {
+    position: relative;
+    background-color: var(--primary);
+    border-radius: 12px;
+    top: 5px;
+    margin-bottom: 5px;
+    left: 2.5%;
+    width: 95%;
+    right: 0;
+    height: 7%;
+}
+
+.historyOption:hover {
+    background-color: var(--primary-accent);
+    cursor: pointer;
+}
+
+.historyOption.selected {
+    background-color: var(--primary-accent);
+}
+
+.historyOption:hover .textCutoff {
+    background: linear-gradient(90deg, rgba(55,79,96,0) 0%, rgba(55,79,96,1) 80%);
+  }
+
+.historyIcon {
+    position: absolute;
+    background-color: transparent;
+    top: 25%;
+    left: 3%;
+    right: 0;
+    height: 50%;
+}
+
+.trashIcon {
+    position: absolute;
+    background-color: transparent;
+    top: 25%;
+    left: 75%;
+    right: 0;
+    height: 50%;
+    opacity: 0.5;
+}
+
+.trashIcon:hover {
+    opacity: 1;
+}
+
+.deleteDiv {
+    position: absolute;
+    background: rgb(16,43,63);
+    background: linear-gradient(90deg, rgba(55,79,96,0) 0%, rgba(55,79,96,1) 60%);
+    border-radius: 8px;
+    right: 3%;
+    top: 0;
+    height: 100%;
+    width: 40%;
+}
+
+.description {
+    color: var(--inputColor);
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+    user-select: none;
+    font-size: 14px;
+    max-width: 80%;
+    top: 28%;
+    left: 14%;
+}
+
+.textCutoff {
+    position: absolute;
+    background: rgb(16,43,63);
+    background: linear-gradient(90deg, rgba(16,43,63,0) 0%, rgba(16,43,63,1) 80%);
+    border-radius: 8px;
+    right: 3%;
+    top: 0;
+    height: 100%;
+    width: 20%;
+}

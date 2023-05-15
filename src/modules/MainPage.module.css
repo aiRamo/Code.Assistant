@@ -1,0 +1,164 @@
+:root {
+    --primary: #102B3F;
+    --primary-accent: #374F60;
+    --secondary: #339989;
+    --secondary-accent: #288678;
+    --textColor: #D0CCD0;
+    --inputColor: #ffffff;
+    --tertiaryColor: #7A6563;
+
+    --hover: var(--primary);
+}
+  
+.backgroundLayer {
+    margin: 0;
+    margin-left: 3vw;
+    padding: 0;
+    top: 0;
+    width: 97%;
+    place-items: center;
+    min-height: 100vh;
+    background-color: var(--primary);
+    transition: all 0.2s ease-in-out;
+    flex-direction: column;
+}
+
+.backgroundLayer.open {
+    margin-left: 15vw; /* Adjust the left margin when the sidebar is open */
+    width: 85%;
+}
+
+.navBar {
+    z-index: 1;
+    background-color: var(--secondary);
+    position: fixed;
+    height: 6vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.5);
+}
+
+
+.queryBox {
+    z-index: 10;
+    background-color: var(--primary-accent);
+    font-size: 18px;
+    position: absolute;
+    height: 5vh;
+    max-height: 45%;
+    width: 60%;
+    bottom: 3vh;
+    left: 0%;
+    right: 0%;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: var(--primary);
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 -6px 25px rgba(0, 0, 0, 0.4);
+    color: var(--inputColor);
+    text-align: left;
+    padding-left: 15px;
+    padding-right: 60px;
+    padding-top: 8px;
+    padding-bottom: 11px;
+    line-height: 3vh;
+    resize: vertical;
+    transition: all 0.2s ease-in-out;
+}
+
+.queryBox.open {
+    left: 15%;
+    width: 50%;
+  }
+
+.queryBox:focus {
+    background-color: var(--primary-accent);
+    color: var(--inputColor);
+    outline: none;
+}
+
+.queryBox::placeholder {
+    color: var(--textColor);
+}
+
+.chatWindow {
+    z-index: 0;
+    position: relative;
+    top: 6vh;
+    left: 0;
+    right: 0;
+    bottom: 12vh;
+    width: 100%;
+    height: calc(100vh - 6vh - 12vh); 
+    background-color: var(--primary-accent); 
+    overflow: hidden;
+    transition: all 0.2s ease-in-out; /* Add transition property */
+}
+
+.chatWindow.open {
+    width: 100%;
+}
+
+.submitButton {
+    z-index: 11;
+    position: fixed;
+    bottom: 3.3vh;
+    left: 77.2vw;
+    right: 0;
+    height: 40px; 
+    width: fit-content;
+    border-radius: 8px;
+    background-color: transparent;
+    border: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.submitButton.open {
+    left: calc(77.2vw + 2.54vw); /* Adjust the left position when the sidebar is open */
+}
+
+.submitButton:hover {
+    background-color: var(--hover);
+}
+
+.buttonIcon {
+    width: 30px;
+    height: 40px;
+}
+
+.messageList {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    overflow-y: auto;
+    height: 100%;
+}
+
+.messageList::-webkit-scrollbar {
+    display: none;
+}
+
+textarea::-webkit-scrollbar {
+    display: none;
+}
+
+.menuButton {
+    background-color: transparent;
+    border: none;
+    border-radius: 15px;
+    margin-top: 2px;
+    margin-left: 3px;
+    transition: all 0.2s ease-in-out;
+}
+
+.menuButton:hover {
+    background-color: var(--primary);
+}
+
+.menuIcon {
+    width: 40px;
+    height: 50px;
+    opacity: 1;
+}

@@ -1,0 +1,25 @@
+.userMessageText {
+    font-size: 18px;
+    font-weight: 450;
+    color: var(--textColor);
+    padding: 8px;
+    height: auto;
+    white-space: pre-wrap;
+}
+
+.userMessageBox {
+    position: relative;
+    background-color: var(--tertiaryColor);
+    border-radius: 8px;
+    width: auto;
+    height: auto;
+    max-width: 60vw;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+.messageItem {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 3px; /* Adjust the spacing between list items */
+}
