@@ -25,8 +25,6 @@ const SideBar = (props: SideBarProps) => {
 
     const reversedHistoryObjects = props.historyObjects.slice().reverse();
 
-    console.log(`Current key: ${props.selectedChatKey}`);
-
     return (
         <div className={sidebarClass}>
             <h1 className={titleClass}>History</h1>

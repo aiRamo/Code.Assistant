@@ -39,18 +39,26 @@
     box-shadow: 0 6px 25px rgba(0, 0, 0, 0.5);
 }
 
+.queryBoxContainer {
+    background-color: transparent;
+    position: absolute;
+    height: 5vh;
+    width: auto;
+    left: 20%;
+    right: 20%;
+    bottom: 3%;
+}
 
 .queryBox {
-    z-index: 10;
     background-color: var(--primary-accent);
     font-size: 18px;
     position: absolute;
-    height: 5vh;
-    max-height: 45%;
-    width: 60%;
-    bottom: 3vh;
-    left: 0%;
-    right: 0%;
+    height: auto;
+    width: 100%; /* Set width to 100% */
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
     border-radius: 5px;
     border-width: 1px;
     border-color: var(--primary);
@@ -67,12 +75,6 @@
     resize: vertical;
     transition: all 0.2s ease-in-out;
 }
-
-.queryBox.open {
-    left: 15%;
-    width: 50%;
-  }
-
 .queryBox:focus {
     background-color: var(--primary-accent);
     color: var(--inputColor);
@@ -103,20 +105,16 @@
 
 .submitButton {
     z-index: 11;
-    position: fixed;
-    bottom: 3.3vh;
-    left: 77.2vw;
+    position: absolute;
+    bottom: 3.3%;
+    left: calc(100% - 45px);
     right: 0;
-    height: 40px; 
-    width: fit-content;
+    height: 40px;
+    width: 40px;
     border-radius: 8px;
     background-color: transparent;
     border: none;
     transition: all 0.2s ease-in-out;
-}
-
-.submitButton.open {
-    left: calc(77.2vw + 2.54vw); /* Adjust the left position when the sidebar is open */
 }
 
 .submitButton:hover {

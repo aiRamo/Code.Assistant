@@ -2,9 +2,9 @@
     z-index: 20;
     position: absolute;
     top: 6vh;
-    left: -12vw;
+    left: -230px;
     height: 94vh;
-    width: 15vw;
+    width: 288px;
     transition: left 0.2s ease-in-out, box-shadow 0.3s ease-out ;
     background-color: var(--primary);
     box-shadow: 10px 18px 30px rgba(51, 153, 137, 1);;
@@ -53,14 +53,14 @@
     border-radius: 12px;
     border: none;
     position: absolute;
-    width: 240px;
+    width: 83%;
     bottom: 15px;
     left: -50px;
     transition: left 0.6s ease-in-out, opacity 0.6s ease-in-out, background-color 0.2s ease-in-out;;
     opacity: 0;
 }
 .newChatButton.open {
-    left: calc(7.5vw - 120px);
+    left: 7.5%;
     opacity: 1;
 }
 .newChatButton:hover {

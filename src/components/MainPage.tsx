@@ -28,8 +28,7 @@ const MainPage = () => {
   const chatRef = firebase.database?.().ref('chats');
 
 
-  useEffect(() => {
-    // Fetch chat objects from Firebase Realtime Database
+  const fetchChatData = () => {
     chatRef?.on('value', (snapshot) => {
       const chatData = snapshot.val();
       if (chatData) {
@@ -41,11 +40,12 @@ const MainPage = () => {
         setHistoryObjects(historyObjects);
       }
     });
-  }, [historyObjects]);
+  };
 
   useEffect(() => {
+    fetchChatData();
     console.log(historyObjects);
-  }, [historyObjects]);
+  }, []);
 
   const handleViewSidebar = () => {
     setSideBarOpen(!sidebarOpen);
@@ -106,6 +106,7 @@ const MainPage = () => {
     if (newChatRef) {
       setUserMessages([]);
       setChatKey(newChatRef.key);
+      fetchChatData();
     }
   };
 
@@ -125,6 +126,7 @@ const MainPage = () => {
       setChatKey(null);
       setUserMessages([]);
       setHistoryObjects([]);
+      fetchChatData();
     }
   }
 
