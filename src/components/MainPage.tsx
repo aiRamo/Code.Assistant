@@ -203,7 +203,7 @@ const MainPage = () => {
             ))}
           </ul>
         </div>
-        <div className={styles.queryBoxContainer}>
+        <div className={`${styles.queryBoxContainer} ${sidebarOpen ? styles.open : ''}`}>
           <textarea
             className={`${styles.queryBox} ${sidebarOpen ? styles.open : ''}`}
             rows={1}

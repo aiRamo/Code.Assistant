@@ -33,6 +33,7 @@
     background-color: var(--secondary);
     position: fixed;
     height: 6vh;
+    min-height: 56px;
     top: 0;
     left: 0;
     right: 0;
@@ -43,21 +44,27 @@
     background-color: transparent;
     position: absolute;
     height: 5vh;
+    max-height: 45%;
     width: auto;
     left: 20%;
     right: 20%;
     bottom: 3%;
+    transition: all 0.2s ease-in-out;
+}
+
+.queryBoxContainer.open {
+    left: 25%;
 }
 
 .queryBox {
     background-color: var(--primary-accent);
     font-size: 18px;
     position: absolute;
-    height: auto;
-    width: 100%; /* Set width to 100% */
+    height: 100%;
+    min-height: 50px;
+    width: auto;
     left: 0;
     right: 0;
-    top: 0;
     bottom: 0;
     border-radius: 5px;
     border-width: 1px;
@@ -87,7 +94,7 @@
 
 .chatWindow {
     z-index: 0;
-    position: relative;
+    position: absolute;
     top: 6vh;
     left: 0;
     right: 0;
@@ -106,7 +113,7 @@
 .submitButton {
     z-index: 11;
     position: absolute;
-    bottom: 3.3%;
+    bottom: 7%;
     left: calc(100% - 45px);
     right: 0;
     height: 40px;

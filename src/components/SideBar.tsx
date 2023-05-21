@@ -44,6 +44,7 @@ const SideBar = (props: SideBarProps) => {
             </div>
             <button className={buttonClass} onClick={props.onNewChatButtonClick}>
                 <img src={additionIcon} className={styles.newChatIcon}/>
+                <p className={styles.buttonText}>New chat</p>
             </button>
         </div>
     );
